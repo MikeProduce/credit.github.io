@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=no"
+    />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Interactive card details form</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section class="flex-container">
+      <div class="main-page-img-div">
+        <svg
+          class="card-logo"
+          width="84"
+          height="47"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <ellipse cx="23.478" cy="23.5" rx="23.478" ry="23.5" fill="#fff" />
+          <path
+            d="M83.5 23.5c0 5.565-4.507 10.075-10.065 10.075-5.559 0-10.065-4.51-10.065-10.075 0-5.565 4.506-10.075 10.065-10.075 5.558 0 10.065 4.51 10.065 10.075Z"
+            stroke="#fff"
+          />
+        </svg>
+        <div class="exp-date">
+          <p id="card-exp-first">00</p>
+          <p id="card-exp-dash">/</p>
+          <p id="card-exp-second">00</p>
+        </div>
+        <p class="card-name" id="card-name">Jane Appleseed</p>
+        <p class="card-num" id="card-card-num">0000 0000 0000 0000</p>
+        <p class="card-cvc" id="card-cvc">000</p>
+        <img class="main-card-img" src="images/bg-card-back.png" alt="" />
+        <img class="maing-page-mobile" src="images/bg-main-mobile.png" alt="" />
+        <img class="main-frontcard-img" src="images/bg-card-front.png" alt="" />
+        <img class="main-page-img" src="images/bg-main-desktop.png" alt="" />
+      </div>
+      <!-- starting form below -->
+      <form class="form-div" id="form-div">
+        <div class="flex-box-1">
+          <div>
+            <label for="fname">CARDHOLDER NAME</label><br />
+            <input
+              type="text"
+              id="card-name-num"
+              name="fname"
+              value="e.g Jane Appleseed"
+              maxlength="20"
+            /><br />
+            <p id="onlyChars">Wrong Format, Only Characters</p>
+          </div>
+          <div class="card-number">
+            <label for="card">CARD NUMBER</label><br />
+            <input
+              maxlength="19"
+              value="e.g 1234 5678 9123 4567"
+              type="text"
+              id="card-num"
+              name="lname"
+            />
+            <p id="onlyChars1">Wrong Format, Numbers Only</p>
+          </div>
+        </div>
+        <div class="flex-box-2">
+          <div>
+            <label class="exp-dates" for="Exp date">EXP. DATE</label><br />
+            <input
+              maxlength="2"
+              value="MM"
+              type="text"
+              id="exp-date"
+              name="Exp DATE"
+            /><br />
+            <p id="onlyChars2">Only Numbers</p>
+          </div>
+          <div>
+            <label for="month/year">(MM/YY)</label><br />
+            <input
+              maxlength="2"
+              value="YY"
+              type="text"
+              id="month-date"
+              name="Month-year"
+            />
+            <p id="onlyChars3">Only Numbers</p>
+          </div>
+          <div>
+            <label class="cvc-label" for="cvc">CVC</label><br />
+            <input
+              maxlength="3"
+              value="e.g 123"
+              type="text"
+              id="CVC"
+              name="CVC"
+            />
+            <p id="onlyChars4">Only Numbers</p>
+          </div>
+        </div>
+        <input id="button" type="button" value="Confirm" class="button" />
+      </form>
+      <div class="confirmation" id="confirmation">
+        <div>
+          <svg
+            width="80"
+            height="80"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle cx="40" cy="40" r="40" fill="url(#a)" />
+            <path d="M28 39.92 36.08 48l16-16" stroke="#fff" stroke-width="3" />
+            <defs>
+              <linearGradient
+                id="a"
+                x1="-23.014"
+                y1="11.507"
+                x2="0"
+                y2="91.507"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stop-color="#6348FE" />
+                <stop offset="1" stop-color="#610595" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <h1 class="thank-you">Thank you!</h1>
+        <p class="thank-you-details">We've added your Card Details</p>
+        <input id="reset" type="button" value="Continue" class="button" />
+      </div>
+    </section>
+    <script src="index.js"></script>
+  </body>
+</html>

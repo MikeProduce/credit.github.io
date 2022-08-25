@@ -1,0 +1,399 @@
+*,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 500;
+}
+
+body {
+  height: 100%;
+  font-size: 10px;
+}
+
+.maing-page-mobile,
+.exp-date,
+.main-card-img,
+.main-frontcard-img,
+.card-cvc,
+.card-num,
+.card-name,
+.card-exp,
+.card-logo,
+.confirmation {
+  position: absolute;
+}
+
+.maing-page-mobile {
+  z-index: -1;
+}
+
+/* flex bullshit god damn */
+
+.flex-box-2,
+.flex-box-1 {
+  text-align: left;
+  justify-content: center;
+}
+.flex-container {
+  display: flex;
+}
+.flex-box-2 {
+  display: flex;
+  gap: 10px;
+  margin-top: 1rem;
+}
+.form-div {
+  width: 100%;
+  text-align: center;
+  margin-top: 20rem;
+  margin-left: 20rem;
+  opacity: 100;
+  max-width: fit-content;
+  max-height: 500px;
+}
+.flex-box-1 {
+  display: grid;
+  margin: 1rem;
+}
+/* adjustments to inputs  */
+label {
+  letter-spacing: 2px;
+}
+
+.card-number,
+.button {
+  margin-top: 0.5rem;
+  border-style: none;
+}
+#card-name-num,
+#card-num {
+  height: 40px;
+  width: 360px;
+  font-size: 18px;
+  border-radius: 5px;
+  border-color: hsl(270, 3%, 87%);
+  border-style: solid;
+  border-width: 1px 1px 1px 1px;
+  padding-left: 10px;
+  color: hsl(270, 3%, 87%);
+}
+#card-name-num,
+#card-num,
+#exp-date,
+#CVC,
+#month-date {
+  outline-color: #a240db;
+}
+#exp-date,
+#CVC,
+#month-date {
+  height: 40px;
+  width: 50px;
+  margin-top: 3px;
+  font-size: 18px;
+  margin-left: 1px;
+  border-radius: 5px;
+  border-color: hsl(270, 3%, 87%);
+  border-style: solid;
+  border-width: 1px 1px 1px 1px;
+  padding-left: 10px;
+  color: hsl(270, 3%, 87%);
+}
+
+#CVC {
+  width: 210px;
+  border-radius: 5px;
+  color: hsl(270, 3%, 87%);
+}
+
+.button {
+  height: 60px;
+  width: 370px;
+  background-color: hsl(278, 68%, 11%);
+  color: white;
+  border-style: none;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+/* cards  */
+
+.exp-date {
+  display: flex;
+  margin-top: 400px;
+  margin-left: 460px;
+  color: white;
+  z-index: 2;
+  font-size: 20px;
+}
+
+.main-card-img {
+  z-index: 1;
+  margin-top: 479px;
+  margin-left: 170px;
+}
+.main-frontcard-img {
+  z-index: 1;
+  margin-top: 200px;
+  margin-left: 100px;
+}
+.main-page-img {
+  z-index: 0;
+}
+.card-cvc {
+  z-index: 2;
+  margin-top: 590px;
+  margin-left: 530px;
+  color: white;
+  font-size: 18px;
+}
+.card-num {
+  z-index: 2;
+  margin-top: 350px;
+  margin-left: 150px;
+  color: white;
+  font-size: 27px;
+  letter-spacing: 3px;
+}
+.card-name {
+  z-index: 2;
+  margin-top: 400px;
+  margin-left: 150px;
+  font-size: 18px;
+  color: white;
+  letter-spacing: 2px;
+}
+.card-exp {
+  z-index: 2;
+  margin-top: 400px;
+  margin-left: 520px;
+  color: white;
+  font-size: 18px;
+}
+
+.card-logo {
+  z-index: 2;
+  margin-top: 230px;
+  margin-left: 150px;
+}
+
+#onlyChars {
+  color: red;
+  opacity: 0;
+}
+#onlyChars1,
+#onlyChars2,
+#onlyChars3,
+#onlyChars4 {
+  color: red;
+  opacity: 0;
+}
+/* asdf */
+/* confirmation page once youve filled out all the requirements */
+
+.confirmation {
+  margin-top: 346px;
+  margin-left: 819px;
+  text-align: center;
+  display: none;
+}
+.thank-you {
+  font-size: 50px;
+  margin-top: 1rem;
+}
+.thank-you-details {
+  font-size: 20px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: hsl(270, 3%, 87%);
+}
+
+/* media queiries to try and make my site mobile responsive. I had the most trouble with this out of the whole project. It was very difficult to understand how reponsive sites worked.I basically nested one media query inside another and that seemed to give me the best result although i did read online that it is not the best option because it does not work on everybrowser */
+@media only screen and (max-device-width: 480px) {
+  .exp-date,
+  .card-cvc,
+  .main-card-img,
+  .main-frontcard-img,
+  .card-name,
+  .confirmation,
+  .card-logo,
+  .card-exp,
+  .card-num {
+    position: absolute;
+  }
+
+  .exp-date {
+    display: flex;
+    margin-top: 285px;
+    margin-left: 300px;
+    color: white;
+    z-index: 2;
+    font-size: 20px;
+  }
+  .card-cvc {
+    z-index: 2;
+    margin-top: 115px;
+    margin-left: 360px;
+    color: white;
+    font-size: 18px;
+  }
+  .main-card-img {
+    z-index: 1;
+    margin-top: 45px;
+    margin-left: 160px;
+    max-width: 300px;
+  }
+  .main-page-img {
+    display: none;
+  }
+  .maing-page-mobile {
+    min-width: 480px;
+  }
+
+  .main-frontcard-img {
+    z-index: 1;
+    margin-top: 150px;
+    margin-left: 200px;
+    max-width: 320px;
+  }
+  .form-div {
+    margin-bottom: 100px;
+    margin-left: 50px;
+    max-width: 100%;
+    padding-left: 100px;
+  }
+
+  .card-logo {
+    z-index: 2;
+    margin-top: 180px;
+    margin-left: 80px;
+  }
+  .card-exp {
+    z-index: 2;
+    margin-top: 320px;
+    margin-left: 320px;
+    color: white;
+    font-size: 18px;
+  }
+  .card-num {
+    z-index: 2;
+    margin-top: 250px;
+    margin-left: 80px;
+    color: white;
+    font-size: 22px;
+    letter-spacing: 1px;
+    width: 100%;
+    max-width: fit-content;
+  }
+  .card-name {
+    z-index: 2;
+    margin-top: 290px;
+    margin-left: 80px;
+    font-size: 18px;
+    color: white;
+    letter-spacing: 2px;
+  }
+
+  .confirmation {
+    margin-top: 427px;
+    margin-left: 55px;
+    text-align: center;
+    display: none;
+  }
+  @media only screen and (min-device-width: 375px) {
+    .exp-date {
+      display: flex;
+      position: absolute;
+      margin-top: 290px;
+      margin-left: 310px;
+      color: white;
+      z-index: 2;
+      font-size: 20px;
+    }
+    .card-cvc {
+      position: absolute;
+      z-index: 2;
+      margin-top: 127px;
+      margin-left: 340px;
+      color: white;
+      font-size: 18px;
+    }
+    .main-card-img {
+      position: absolute;
+      z-index: 1;
+      margin-top: 50px;
+      margin-left: 80px;
+      max-width: 330px;
+    }
+    .main-page-img {
+      display: none;
+    }
+    .maing-page-mobile {
+      min-width: 480px;
+    }
+
+    .main-frontcard-img {
+      position: relative;
+      z-index: 1;
+      margin-top: 150px;
+      margin-left: 50px;
+      max-width: 335px;
+    }
+    .form-div {
+      margin-bottom: 100px;
+      margin-left: 50px;
+      /* max-width: 150px; */
+      padding-left: 50px;
+    }
+
+    .card-logo {
+      position: absolute;
+      z-index: 2;
+      margin-top: 180px;
+      margin-left: 70px;
+    }
+    .card-exp {
+      position: absolute;
+      z-index: 2;
+      margin-top: 320px;
+      margin-left: 300px;
+      color: white;
+      font-size: 18px;
+    }
+    .card-num {
+      position: absolute;
+      z-index: 2;
+      margin-top: 250px;
+      margin-left: 80px;
+      color: white;
+      font-size: 22px;
+      letter-spacing: 1px;
+      width: 100%;
+      max-width: fit-content;
+    }
+    .card-name {
+      position: absolute;
+      z-index: 2;
+      margin-top: 290px;
+      margin-left: 70px;
+      font-size: 18px;
+      color: white;
+      letter-spacing: 2px;
+    }
+    .form-div {
+      position: absolute;
+      max-width: 400px;
+      text-align: center;
+      margin-top: 21rem;
+      margin-left: 0rem;
+    }
+    .confirmation {
+      position: absolute;
+      margin-top: 370px;
+      margin-left: 55px;
+      text-align: center;
+      display: none;
+    }
+  }
+}
