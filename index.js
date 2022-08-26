@@ -112,13 +112,18 @@ buttonclick.addEventListener("click", function () {
     document.getElementById("confirmation").style.display = "block";
     document.getElementById("form-div").style.display = "none";
   } else {
-    alert(
-      "There is either something in the wrong format or something is empty please fill in the requirements"
-    );
+    alert("Please use the correct format or fill in the requirements");
   }
 });
 
 // this resets the whole page back to the first page
 reset.addEventListener("click", function () {
   window.location.reload();
+});
+// This adds a space every 4 inputs in the cardnumber section
+cardNum.addEventListener("input", function (e) {
+  e.target.value = e.target.value
+    .replace(/[^\dA-Z]/g, "")
+    .replace(/(.{4})/g, "$1 ")
+    .trim();
 });
