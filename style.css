@@ -35,17 +35,26 @@ body {
   text-align: left;
   justify-content: center;
 }
-.flex-container {
+.flex-container,
+.flex-box-2,
+.exp-date {
   display: flex;
 }
-.flex-box-2 {
-  display: flex;
-  gap: 10px;
+.flex-box-2,
+.thank-you,
+.thank-you-details {
   margin-top: 1rem;
+}
+.flex-box-2 {
+  gap: 10px;
+}
+
+.form-div,
+.confirmation {
+  text-align: center;
 }
 .form-div {
   width: 100%;
-  text-align: center;
   margin-top: 20rem;
   margin-left: 20rem;
   opacity: 100;
@@ -57,7 +66,8 @@ body {
   margin: 1rem;
 }
 /* adjustments to inputs  */
-label {
+label,
+.card-name {
   letter-spacing: 2px;
 }
 
@@ -66,16 +76,36 @@ label {
   margin-top: 0.5rem;
   border-style: none;
 }
+
+#exp-date,
+#CVC,
+#month-date,
+#card-name-num,
+#card-num,
+.button,
+.card-cvc,
+.card-name,
+.card-exp {
+  font-size: 18px;
+}
+
+#card-name-num,
+#card-num,
+#exp-date,
+#CVC,
+#month-date {
+  border-color: hsl(270, 3%, 87%);
+  height: 40px;
+  border-style: solid;
+  border-width: 1px 1px 1px 1px;
+  padding-left: 10px;
+}
+
 #card-name-num,
 #card-num {
   height: 40px;
   width: 360px;
-  font-size: 18px;
   border-radius: 5px;
-  border-color: hsl(270, 3%, 87%);
-  border-style: solid;
-  border-width: 1px 1px 1px 1px;
-  padding-left: 10px;
   color: hsl(270, 3%, 87%);
 }
 #card-name-num,
@@ -91,50 +121,55 @@ label {
   height: 40px;
   width: 50px;
   margin-top: 3px;
-  font-size: 18px;
   margin-left: 1px;
   border-radius: 5px;
-  border-color: hsl(270, 3%, 87%);
-  border-style: solid;
-  border-width: 1px 1px 1px 1px;
-  padding-left: 10px;
   color: hsl(270, 3%, 87%);
 }
 
 #CVC {
   width: 210px;
-  border-radius: 5px;
-  color: hsl(270, 3%, 87%);
+}
+.button,
+.exp-date,
+.card-cvc,
+.card-num,
+.card-name,
+.card-exp {
+  color: white;
 }
 
 .button {
   height: 60px;
   width: 370px;
   background-color: hsl(278, 68%, 11%);
-  color: white;
-  border-style: none;
   border-radius: 5px;
-  font-size: 18px;
 }
 
 /* cards  */
 
+.exp-date,
+.card-cvc,
+.card-num,
+.card-name,
+.card-exp,
+.card-logo {
+  z-index: 2;
+}
 .exp-date {
-  display: flex;
   margin-top: 400px;
   margin-left: 460px;
-  color: white;
-  z-index: 2;
   font-size: 20px;
+}
+.main-card-img,
+.main-frontcard-img {
+  z-index: 1;
 }
 
 .main-card-img {
-  z-index: 1;
   margin-top: 479px;
   margin-left: 170px;
 }
 .main-frontcard-img {
-  z-index: 1;
   margin-top: 200px;
   margin-left: 100px;
 }
@@ -142,46 +177,30 @@ label {
   z-index: 0;
 }
 .card-cvc {
-  z-index: 2;
   margin-top: 590px;
   margin-left: 530px;
-  color: white;
-  font-size: 18px;
 }
 .card-num {
-  z-index: 2;
   margin-top: 350px;
   margin-left: 150px;
-  color: white;
   font-size: 27px;
   letter-spacing: 3px;
 }
 .card-name {
-  z-index: 2;
   margin-top: 400px;
   margin-left: 150px;
-  font-size: 18px;
-  color: white;
-  letter-spacing: 2px;
 }
 .card-exp {
-  z-index: 2;
   margin-top: 400px;
   margin-left: 520px;
-  color: white;
-  font-size: 18px;
 }
 
 .card-logo {
-  z-index: 2;
   margin-top: 230px;
   margin-left: 150px;
 }
 
-#onlyChars {
-  color: red;
-  opacity: 0;
-}
+#onlyChars,
 #onlyChars1,
 #onlyChars2,
 #onlyChars3,
@@ -189,37 +208,39 @@ label {
   color: red;
   opacity: 0;
 }
-/* asdf */
+
 /* confirmation page once youve filled out all the requirements */
 
 .confirmation {
   margin-top: 346px;
   margin-left: 819px;
-  text-align: center;
   display: none;
 }
 .thank-you {
   font-size: 50px;
-  margin-top: 1rem;
 }
 .thank-you-details {
   font-size: 20px;
-  margin-top: 1rem;
   margin-bottom: 1rem;
   color: hsl(270, 3%, 87%);
 }
 
 /* media queiries to try and make my site mobile responsive. I had the most trouble with this out of the whole project. It was very difficult to understand how reponsive sites worked.I basically nested one media query inside another and that seemed to give me the best result although i did read online that it is not the best option because it does not work on everybrowser */
 @media only screen and (max-device-width: 480px) {
-  .exp-date,
-  .card-cvc,
   .main-card-img,
   .main-frontcard-img,
-  .card-name,
-  .confirmation,
+  .confirmation {
+    position: absolute;
+  }
+
+  .exp-date,
+  .card-cvc,
   .card-logo,
   .card-exp,
-  .card-num {
+  .card-num,
+  .card-name {
+    color: white;
+    z-index: 2;
     position: absolute;
   }
 
@@ -227,15 +248,11 @@ label {
     display: flex;
     margin-top: 285px;
     margin-left: 300px;
-    color: white;
-    z-index: 2;
     font-size: 20px;
   }
   .card-cvc {
-    z-index: 2;
     margin-top: 115px;
     margin-left: 360px;
-    color: white;
     font-size: 18px;
   }
   .main-card-img {
@@ -265,33 +282,26 @@ label {
   }
 
   .card-logo {
-    z-index: 2;
     margin-top: 180px;
     margin-left: 80px;
   }
   .card-exp {
-    z-index: 2;
     margin-top: 320px;
     margin-left: 320px;
-    color: white;
     font-size: 18px;
   }
   .card-num {
-    z-index: 2;
     margin-top: 250px;
     margin-left: 80px;
-    color: white;
     font-size: 22px;
     letter-spacing: 1px;
     width: 100%;
     max-width: fit-content;
   }
   .card-name {
-    z-index: 2;
     margin-top: 290px;
     margin-left: 80px;
     font-size: 18px;
-    color: white;
     letter-spacing: 2px;
   }
 
@@ -302,21 +312,29 @@ label {
     display: none;
   }
   @media only screen and (min-device-width: 375px) {
+    .exp-date,
+    .card-cvc,
+    .card-exp,
+    .card-name,
+    .card-num {
+      color: white;
+      z-index: 2;
+    }
+
+    .card-logo {
+      z-index: 2;
+    }
     .exp-date {
       display: flex;
       position: absolute;
       margin-top: 290px;
       margin-left: 310px;
-      color: white;
-      z-index: 2;
       font-size: 20px;
     }
     .card-cvc {
       position: absolute;
-      z-index: 2;
       margin-top: 127px;
       margin-left: 340px;
-      color: white;
       font-size: 18px;
     }
     .main-card-img {
@@ -349,24 +367,19 @@ label {
 
     .card-logo {
       position: absolute;
-      z-index: 2;
       margin-top: 180px;
       margin-left: 70px;
     }
     .card-exp {
       position: absolute;
-      z-index: 2;
       margin-top: 320px;
       margin-left: 300px;
-      color: white;
       font-size: 18px;
     }
     .card-num {
       position: absolute;
-      z-index: 2;
       margin-top: 250px;
       margin-left: 80px;
-      color: white;
       font-size: 22px;
       letter-spacing: 1px;
       width: 100%;
@@ -374,11 +387,9 @@ label {
     }
     .card-name {
       position: absolute;
-      z-index: 2;
       margin-top: 290px;
       margin-left: 70px;
       font-size: 18px;
-      color: white;
       letter-spacing: 2px;
     }
     .form-div {
